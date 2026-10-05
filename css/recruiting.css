@@ -229,3 +229,7 @@ html.site-menu-open, html.site-menu-open body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .recruitment-button { transition: none; }
 }
+
+/* Preserve the original sticker and replace only its circular lettering. */
+.home-apply-cta .hero-cta-text-animation { background-image: url("../images/hero-cta-apply-now.svg"); }
+.home-apply-cta:focus-visible { outline: 3px solid white; outline-offset: 5px; }
