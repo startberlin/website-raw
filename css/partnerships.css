@@ -1,0 +1,19 @@
+/* Align both sides of the Partnerships contact card while they sit side by side. */
+@media screen and (min-width: 480px) {
+  .partnerships-contact .contact-card-50 {
+    height: auto;
+  }
+
+  .partnerships-contact .board-card.contact {
+    flex: 1;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .partnerships-contact .board-card.contact .board-photo {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+}
