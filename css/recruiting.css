@@ -233,3 +233,27 @@ html.site-menu-open, html.site-menu-open body { overflow: hidden; }
 /* Preserve the original sticker and replace only its circular lettering. */
 .home-apply-cta .hero-cta-text-animation { background-image: url("../images/hero-cta-apply-now.svg"); }
 .home-apply-cta:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+
+/* Keep the shared testimonial layout independent of each page's body font size. */
+@media (max-width: 991px) {
+  .section-alumnis { min-width: 0; padding: 72px 32px; gap: 32px; font-size: 16px; line-height: 1.6; overflow: visible; }
+  .section-alumnis .s2-h2-wrapper { width: 100%; margin: 0; padding: 0; gap: 12px; align-items: center; }
+  .section-alumnis .s2-h2-wrapper .s2 { margin: 0; font-size: 13px; line-height: 1.5; text-align: center; }
+  .section-alumnis .s2-h2-wrapper .h2 { width: 100%; margin: 0; padding: 0; font-size: 40px; line-height: 1.1; text-align: center; }
+  .section-alumnis .alumni-quotes { display: flex; align-items: stretch; gap: 16px; width: 100%; min-width: 0; margin: 0; padding: 0 0 8px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+  .section-alumnis .alumni-quotes:focus-visible { outline: 3px solid var(--recruitment-accent); outline-offset: 6px; }
+  .section-alumnis .alumni-quote-wrapper { flex: 0 0 calc(100% - 24px); flex-flow: column; justify-content: flex-start; align-items: stretch; width: calc(100% - 24px); max-width: 360px; min-width: 0; height: auto; overflow: hidden; scroll-snap-align: start; }
+  .section-alumnis .alumni-img { display: block; flex: none; width: 100%; height: auto; aspect-ratio: auto; }
+  .section-alumnis .alumni-content-wrapper { flex: 1; align-items: stretch; justify-content: flex-start; gap: 0; width: 100%; min-width: 0; height: auto; padding: 24px; }
+  .section-alumnis .alumni-quote-details-wrapper { flex: 1; align-items: stretch; gap: 24px; width: 100%; min-width: 0; height: auto; }
+  .section-alumnis .alumni-quote-details-wrapper .p1 { max-width: none; margin: 0; font-size: 16px; line-height: 1.6; overflow-wrap: break-word; }
+  .section-alumnis .alumni-name-logo-banner { min-width: 0; }
+  .section-alumnis .alumni-name-logo-banner a:focus-visible { outline: 3px solid var(--recruitment-accent); outline-offset: 4px; }
+  .section-alumnis .name-wrapper { gap: 6px; min-width: 0; }
+  .section-alumnis .name-wrapper .s2 { font-size: 16px; line-height: 1.4; overflow-wrap: break-word; }
+  .section-alumnis .name-wrapper .p2 { font-size: 14px; line-height: 1.4; overflow-wrap: break-word; }
+}
+@media (max-width: 767px) {
+  .section-alumnis { padding: 60px 20px; }
+  .section-alumnis .s2-h2-wrapper .h2 { font-size: 32px; }
+}
