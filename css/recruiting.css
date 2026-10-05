@@ -257,3 +257,27 @@ html.site-menu-open, html.site-menu-open body { overflow: hidden; }
   .section-alumnis { padding: 60px 20px; }
   .section-alumnis .s2-h2-wrapper .h2 { font-size: 32px; }
 }
+
+/* Move the full repeated logo strip. Webflow's individual-row loop skips logos. */
+.home-partner-logos { position: relative; align-items: flex-start; width: 100%; max-width: 100%; overflow: hidden; }
+.home-partner-logos .logos-container { flex: none; width: max-content; max-width: none; animation: home-partner-logos-scroll 80s linear infinite; }
+.home-partner-logos .logos-row { flex: none; justify-content: flex-start; width: max-content; min-width: 0; max-width: none; gap: 48px; padding: 24px 0 24px 48px; overflow: visible; transform: none !important; }
+.home-partner-logos .partner-logo { display: block; flex: none; max-height: 64px; object-fit: contain; }
+.home-partner-logos .logos-gradient { z-index: 1; pointer-events: none; }
+@keyframes home-partner-logos-scroll { to { transform: translateX(-50%); } }
+@media (max-width: 991px) {
+  .home-partner-logos .logos-row { gap: 32px; padding-left: 32px; }
+}
+@media (max-width: 767px) {
+  .home-partner-logos .logos-row { gap: 24px; padding-left: 24px; }
+}
+@media (max-width: 479px) {
+  .home-partner-logos .logos-container { animation-duration: 60s; }
+  .home-partner-logos .logos-row { gap: 16px; padding: 20px 0 20px 16px; }
+  .home-partner-logos .partner-logo { max-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-partner-logos .logos-container { width: 100%; flex-direction: column; animation: none; }
+  .home-partner-logos .logos-row { width: 100%; flex-wrap: wrap; justify-content: center; padding: 20px; }
+  .home-partner-logos .logos-row[aria-hidden="true"], .home-partner-logos .logos-gradient { display: none; }
+}
