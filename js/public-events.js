@@ -1,6 +1,6 @@
 (() => {
   const section = document.querySelector('[data-public-events]');
-  if (!section) return;
+  if (!section || section.hidden) return;
   let userInteracted = false;
   ['pointerdown', 'wheel', 'touchstart', 'keydown'].forEach((type) => {
     window.addEventListener(type, () => { userInteracted = true; }, { once: true, passive: true, capture: true });
