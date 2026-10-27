@@ -1,6 +1,6 @@
 :root {
   --site-header-height: 80px;
-  --site-announcement-height: 36px;
+  --site-announcement-height: 0px; /* Closed applications. Restore 36px with the opening announcement. */
   --site-top-height: calc(var(--site-header-height) + var(--site-announcement-height));
   --recruitment-ink: var(--dark-navy);
   --recruitment-accent: var(--berlin-blue);
